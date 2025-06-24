@@ -56,7 +56,7 @@ const BookNowButton: React.FC<{ flight: Flight; isCheapest: boolean }> = ({ flig
     setError(null);
     try {
       const res = await fetch(
-        `/api/booking/options?booking_token=${encodeURIComponent(
+        `https://flightfinderpro-backend-1.onrender.com/api/booking/options?booking_token=${encodeURIComponent(
           flight.booking_token
         )}&departure_id=${flight.origin}&arrival_id=${flight.destination}&outbound_date=${flight.date}`
       );
