@@ -1,6 +1,6 @@
 import { Flight } from '../types/flight';
 
-const API_BASE_URL = 'http://localhost:3001';
+const API_BASE_URL = 'https://flightfinderpro-backend-1.onrender.com';
 
 export interface FlightSearchParams {
   departure_id?: string;
