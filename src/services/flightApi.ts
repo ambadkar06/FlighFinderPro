@@ -1,6 +1,6 @@
 import { Flight } from '../types/flight';
 
-const API_BASE_URL = 'https://flightfinderpro-backend-1.onrender.com';
+const API_BASE_URL = 'https://flightfinderpro-backend-1.onrender.com/api';
 
 export interface FlightSearchParams {
   departure_id?: string;
@@ -39,7 +39,7 @@ export const searchFlights = async (params: FlightSearchParams): Promise<ApiResp
     });
 
     
-    const response = await fetch(`${API_BASE_URL}/api/flights/search?${queryParams.toString()}`, {
+    const response = await fetch(`${API_BASE_URL}/flights/search?${queryParams.toString()}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
